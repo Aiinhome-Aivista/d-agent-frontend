@@ -7,8 +7,7 @@ export interface ApiConfig {
 }
 
 export const defaultConfig: ApiConfig = {
-  baseUrl: 'http://157.173.221.226:3004'
-  /* baseUrl: 'http://122.163.121.176:3004' */,
+  baseUrl: 'http://157.173.221.226:3004',
   timeout: 10000,
 };
 
@@ -38,7 +37,10 @@ export const API_ENDPOINTS = {
   WORKSPACE: {
     CREATE: '/create_workspace',
     GET_WORKSPACES: '/workspaces',
+    GET_ADMIN_WORKSPACES: '/get-workspace',
     SET_ACTIVE_WORKSPACE: '/set-active-workspace',
+    ASSIGN_WORKSPACE_USERS: '/assign_workspace_users',
+    WORKSPACE_USERS: '/workspace_users',
   },
   FILE_UPLOAD: {
     CSV_UPLOAD: '/upload_csv',
@@ -47,4 +49,8 @@ export const API_ENDPOINTS = {
   COMMON: {
     SESSION_CHAT_HISTORY: '/session-chat-history',
   },
+  USERS: {
+    GET_USERS: '/users',
+    CREATE_USER: '/create_user',
+  }
 };
